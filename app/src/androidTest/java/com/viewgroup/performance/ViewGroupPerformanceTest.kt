@@ -19,31 +19,32 @@ class ViewGroupPerformanceTest {
     @Test
     fun test_case1() {
         Log.i(TAG, "test case 1")
-        Log.i(TAG, "$CONSTRAINT ${measureTime(R.layout.test_case1_constraint)}")
         Log.i(TAG, "$LINEAR ${measureTime(R.layout.test_case1_linear)}")
+        Log.i(TAG, "$CONSTRAINT ${measureTime(R.layout.test_case1_constraint)}")
     }
 
     @Test
     fun test_case2() {
         Log.i(TAG, "test case 2")
-        Log.i(TAG, "$CONSTRAINT ${measureTime(R.layout.test_case2_constraint)}")
         Log.i(TAG, "$LINEAR ${measureTime(R.layout.test_case2_linear)}")
+        Log.i(TAG, "$RELATIVE ${measureTime(R.layout.test_case2_relative)}")
         Log.i(TAG, "$FRAME ${measureTime(R.layout.test_case2_frame)}")
+        Log.i(TAG, "$CONSTRAINT ${measureTime(R.layout.test_case2_constraint)}")
     }
 
     @Test
     fun test_case3() {
         Log.i(TAG, "test case 3")
-        Log.i(TAG, "$CONSTRAINT ${measureTime(R.layout.test_case3_constraint)}")
         Log.i(TAG, "$LINEAR ${measureTime(R.layout.test_case3_linear)}")
         Log.i(TAG, "$RELATIVE ${measureTime(R.layout.test_case3_relative)}")
+        Log.i(TAG, "$CONSTRAINT ${measureTime(R.layout.test_case3_constraint)}")
     }
 
     @Test
     fun test_case4() {
         Log.i(TAG, "test case 4")
-        Log.i(TAG, "$CONSTRAINT ${measureTime(R.layout.test_case4_constraint)}")
         Log.i(TAG, "$LINEAR ${measureTime(R.layout.test_case4_linear)}")
+        Log.i(TAG, "$CONSTRAINT ${measureTime(R.layout.test_case4_constraint)}")
     }
 
     private fun measureTime(@LayoutRes layoutRes: Int): Long {
@@ -67,7 +68,7 @@ class ViewGroupPerformanceTest {
         private const val TAG = "---->"
         private const val REPEATS = 1_000
         private const val LINEAR = "----> linear:\t\t"
-        private const val FRAME = "----> frame:\t\t\t"
+        private const val FRAME = "----> frame:\t\t"
         private const val RELATIVE = "----> relative:\t\t"
         private const val CONSTRAINT = "----> constraint:\t"
     }
