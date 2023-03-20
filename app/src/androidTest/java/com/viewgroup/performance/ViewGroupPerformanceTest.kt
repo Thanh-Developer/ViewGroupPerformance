@@ -45,6 +45,7 @@ class ViewGroupPerformanceTest {
         Log.i(TAG, "test case 4")
         Log.i(TAG, "$LINEAR ${measureTime(R.layout.test_case4_linear)}")
         Log.i(TAG, "$CONSTRAINT ${measureTime(R.layout.test_case4_constraint)}")
+        Log.i(TAG, "$MULTI_CONSTRAINT ${measureTime(R.layout.test_case4_multi_constraint)}")
     }
 
     private fun measureTime(@LayoutRes layoutRes: Int): Long {
@@ -71,5 +72,6 @@ class ViewGroupPerformanceTest {
         private const val FRAME = "----> frame:\t\t"
         private const val RELATIVE = "----> relative:\t\t"
         private const val CONSTRAINT = "----> constraint:\t"
+        private const val MULTI_CONSTRAINT = "----> multi_constraint:\t"
     }
 }
